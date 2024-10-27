@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid
+{
+    width: 100%;
+    height: 100vh;
+    background-color:#291f68;
+}
+.card
+{
+    width: 400px;
+    height: auto;
+    background-color:#dfe2ff;
+    border: none;
+    padding: 25px;
+    border-radius: 15px;
+    /* border-bottom: 5px solid yellow;
+    border-top: 5px solid yellow;
+    border-right: 12px solid yellow; */
+}
+.card-img
+{
+    width: 100%;
+    height: auto;
+    /* border: 8px solid white; */
+    border-radius: 200px;
+    margin-bottom: 25px;
+}
+.card h4
+{
+    letter-spacing:5px;
+    color: black;
+    text-transform: uppercase;
+}
+.card h3
+{
+    letter-spacing: 2px;
+    color: black;
+    font-size: 20px;
+}
+nav a
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav a:nth-child(3)
+{
+    border-bottom: 2px solid #291f68;
+}
+nav a:hover
+{
+    color: #291f68;
+    transition: all 1ms;
+    font-weight: bold;
+    border-bottom: 2px solid #291f68;
+}
+form .form-control,
+form button {
+    margin-bottom: 15px;
+}
+.dcontent
+{
+  width: 100%;
+  height: 200px;
+  background-color:#07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.dcontent .dtext
+{
+  z-index: 1;
+  color: white;
+  font-size: 1em;
+}
+.dcontent .dtext:hover
+{
+  z-index: 1;
+  color:white;
+}
+.dcontent::before
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(180deg,rgb(0,183,255),rgb(255,44,255));
+  height: 130%;
+  animation: animate 4s linear infinite;
+  transition: all 0.3s;
+}
+.dcontent::after
+{
+  content: '';
+  position: absolute;
+  background-color: #07182E;
+  inset: 6px;
+  border-radius: 15px;
+}
+@keyframes animate
+{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px)
+{
+    .links {
+        justify-content: center;
+    }
+    nav a
+    {
+        font-size: 14px;
+    }
+}
+@media (max-width: 336px) {
+    .card {
+        width: 100%; 
+        padding: 8px; 
+    }
+
+    .card h4, .card h3
+    {
+        font-size: 18px;
+        letter-spacing: 1px; 
+    }
+
+    .card-img
+    {
+        width: 100%; 
+        border-radius: 150px; 
+        margin-bottom: 15px;
+    }
+
+    .links img
+    {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .links
+    {
+        gap: 1rem;
+    }
+
+    nav a
+    {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dcontent {
+      height: 180px; /* Slightly reduce the height on tablets */
+    }
+    
+    .dcontent .dtext {
+      font-size: 1.2em; /* Reduce font size for better fit */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .dcontent {
+      height: 150px; /* Further reduce height on smaller devices */
+    }
+  
+    .dcontent .dtext {
+      font-size: 1em; /* Font size for mobile screens */
+      padding: 0 10px; /* Optional padding for smaller screens */
+      white-space: nowrap; /* Ensure text remains on one line */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .dcontent {
+      height: 120px; /* Reduce height even more for very small devices */
+    }
+    
+    .dcontent .dtext {
+      font-size: 0.9em; /* Smaller font for very small screens */
+    }
+  }
+
